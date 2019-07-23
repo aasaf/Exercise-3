@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <script src="formCtrl.js"></script>
+</head>
+<body >
+
+    <div ng-controller="formCtrl">
+            <h1>Calculator</h1>
+            <input type="number" ng-model="num_a">
+            <input type="number" ng-model="num_b" />
+
+            <br>
+            <div class ="radio">
+            <label>
+                <input ng-model ="variable" type = "radio" value ="+" ng-change ='calc(variable)' > 
+                +
+            </label>
+            </div>
+
+            <div class ="radio">
+            <label>
+                <input ng-model ="variable" type = "radio" value ="-" ng-change ='calc(variable)' > 
+                -
+            </label>
+            </div>
+
+            <div class ="radio">
+            <label>
+                <input ng-model ="variable" type = "radio" value ="*" ng-change ='calc(variable)' > 
+                *
+            </label>
+            </div>
+
+            <div class ="radio">
+            <label>
+                <input ng-model ="variable" type = "radio" value ="/" ng-change ='calc(variable)' > 
+                /
+            </label>
+            </div>
+
+
+            <div>The total is: {{total}}</div>
+
+            <div>The total child is: {{result_child}}</div>
+
+
+            <br>
+           
+        </body>
+
+    </div>
+    <br>
+</body>
+</html>
